@@ -1,0 +1,256 @@
+:root {
+    --primary-color: #6366f1;
+    --secondary-color: #8b5cf6;
+    --glass-bg: rgba(255, 255, 255, 0.95);
+}
+
+/* 基础样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', 'PingFang SC', system-ui;
+}
+
+body {
+    background: linear-gradient(135deg, #667eea 0%, #4f46e5 100%);
+    min-height: 100vh;
+    padding: 2rem;
+}
+
+/* 毛玻璃容器 */
+.glass-container {
+    max-width: 800px;
+    margin: 0 auto;
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+}
+
+/* 头部 */
+.header {
+    text-align: center;
+    color: white;
+    margin-bottom: 3rem;
+    padding: 2rem;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.header p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+/* 卡片样式 */
+.card {
+    background: var(--glass-bg);
+    border-radius: 1.5rem;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+    border: 1px solid rgba(255,255,255,0.3);
+}
+
+/* 表单样式 */
+.input-form {
+    background: var(--glass-bg);
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #1f2937;
+    font-weight: 500;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 2px solid #e5e7eb;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus {
+    border-color: var(--primary-color);
+    outline: none;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 1rem;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.submit-btn:hover {
+    transform: translateY(-2px);
+}
+
+/* 历史记录样式 */
+.history-section {
+    margin-top: 2rem;
+    background: var(--glass-bg);
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+}
+
+.history-section h2 {
+    color: #1f2937;
+    margin-bottom: 1.5rem;
+}
+
+.history-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.history-item:last-child {
+    border-bottom: none;
+}
+
+.app-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.app-name {
+    font-weight: 500;
+    color: #1f2937;
+}
+
+.bundle-id {
+    font-size: 0.875rem;
+    color: #6b7280;
+}
+
+.actions {
+    display: flex;
+    gap: 1rem;
+}
+
+.install-btn, .copy-btn {
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    font-size: 0.875rem;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.install-btn {
+    background: var(--primary-color);
+    color: white;
+    text-decoration: none;
+}
+
+.copy-btn {
+    background: #e0e7ff;
+    color: var(--primary-color);
+    border: none;
+}
+
+.install-btn:hover, .copy-btn:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+}
+
+/* 结果展示 */
+.result-card {
+    animation-duration: 0.6s;
+}
+
+.result-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.success-icon {
+    color: #10b981;
+    font-size: 2rem;
+    margin-right: 1rem;
+}
+
+.result-header h3 {
+    color: #374151;
+    font-size: 1.4rem;
+}
+
+/* 链接框 */
+.url-box {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.url-box input {
+    flex: 1;
+    padding: 0.8rem;
+    border: 2px solid #e5e7eb;
+    border-radius: 0.75rem;
+    background: #f8fafc;
+    font-size: 0.95rem;
+}
+
+.copy-btn {
+    padding: 0 1.5rem;
+    background: #e0e7ff;
+    color: var(--primary-color);
+    border: none;
+    border-radius: 0.75rem;
+    cursor: pointer;
+    transition: background 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.copy-btn:hover {
+    background: #c7d2fe;
+}
+
+/* 二维码样式 */
+.qrcode-box {
+    text-align: center;
+    padding: 1.5rem;
+    background: #f8fafc;
+    border-radius: 1rem;
+}
+
+.qrcode-box img {
+    width: 200px;
+    height: 200px;
+    margin: 1rem 0;
+    border: 8px solid white;
+    border-radius: 1rem;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+.qrcode-box p {
+    color: #64748b;
+    font-size: 0.95rem;
+    margin-top: 1rem;
+}
